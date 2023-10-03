@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-top: 50px;
+		}
+		
+		.image {
+			flex: 1;
+			margin-left: 100px;
+		}
+		
+		.image img {
+			max-width: 100%;
+			height: auto;
+		}
+		
+		.feedback {
+			flex: 1;
+			margin-right: 100px;
+		}
+		
+		h1 {
+			font-size: 36px;
+			margin-bottom: 20px;
+			color: #333;
+		}
+		
+		form {
+			background-color: #a15830;
+			border-radius: 5px;
+			padding: 20px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      outline: black;
+
+		}
+		
+		label {
+			display: block;
+			font-size: 18px;
+			margin-bottom: 10px;
+			color: black;
+		}
+		
+		input[type=text], textarea {
+			width: 95%;
+			padding: 10px;
+			border-radius: 5px;
+			border: black;
+			margin-right: 30px;
+			margin-bottom: 20px;
+      outline-color: black;
+      border-color: black;
+      border-width: 3px;
+		}
+		
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: black;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+			transition: background-color 0.3s ease;
+		}
+		
+		input[type=submit]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+  <div>
+    <a href="index.php">Home</a>
+  </div>
+	<div class="container">
+		<div class="image">
+			<img src="feedback.jpg" alt="Image" >
+		</div>
+		<div class="feedback">
+			<h1>Feedback/ Question / Contact :</h1>
+			<form action="" method="post">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" required>
+				<label for="feedback">Feedback:</label>
+				<textarea id="feedback" name="feedback" rows="5" required></textarea>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
+<!-- <?php
+// Connect to the database
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "feedback";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+	die("Connection failed: " . mysqli_connect_error());
+}
+
+// Get the feedback data from the form
+$name = mysqli_real_escape_string($conn, $_POST['name']);
+$username = mysqli_real_escape_string($conn, $_POST['username']);
+$feedback = mysqli_real_escape_string($conn, $_POST['feedback']);
+
+// Insert the feedback into the database
+$sql = "INSERT INTO feedback (name, username, feedback)
+		VALUES ('$name', '$username', '$feedback')";
+
+if (mysqli_query($conn, $sql)) {
+	echo "Feedback submitted successfully";
+} else {
+	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
+ -->

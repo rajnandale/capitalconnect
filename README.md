@@ -1,3 +1,5 @@
+![Home Page](/screenshots/home.png)
+
 Capital Connect web project is develope as begineer level project
 
 No framework is used in this project, All the files and content of this project is unstructured

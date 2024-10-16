@@ -26,3 +26,12 @@ Still if u need any help then contact owner of this repo i.e. me Raj Nandale
 ![Usertype page](/screenshots/usertype.png)
 ![Register page](/screenshots/register.png)
 ![Login page](/screenshots/login.png)
+
+
+Project Details:
+Tech Stack : HTML, CSS, PHP, MySQL
+Testing and Tools : Xampp
+
+Theme/idea of this project is inspired by startupindia.gov.in initiative
+
+Features: *Chatbot support, *upload startup details through pdf presentation, *better profile section, *search funtionality, *Simple and Colorful Interface, *easier navigation

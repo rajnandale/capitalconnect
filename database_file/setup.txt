@@ -1,4 +1,4 @@
-## use another branch "local_mysql" for below operations
+## This is alternate setup thus use another branch "local_mysql" for below operations
 step 1) install xampp and start apache server and mysql
 
 step 2) create rn_8164 database in localhost/phpmyadmin page and then import database file into rn_8164 database

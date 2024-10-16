@@ -6,13 +6,13 @@ No framework is used in this project, All the files and content of this project 
 
 For initializing and setting things locally follow below steps:
 
-step 1) install xampp and use apache server for localhost
+step 1) install xampp and start apache server and mysql
 
-step 2) create rn_8164 database in phpmyadmin page and then import database file into rn_8164 database
+step 2) create rn_8164 database in localhost/phpmyadmin page and then import database file into rn_8164 database
 
 step 3) paste website folder into " xampp/htdocs " folder
 
-step 4) open xampp and start apache server and mysql , then into browser open localhost:80/capitalconnect
+step 4) Into browser open localhost/capitalconnect url
 
 ## we encouraged to forked this repo and contribute by making this project well structured using framework
 suggestion :- use laravel framework, enable remote sql database support,

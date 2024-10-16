@@ -8,7 +8,7 @@ For initializing and setting things locally follow below steps:
 
 step 1) install xampp and use apache server for localhost
 
-step 2) import database file at phpmyadmin page
+step 2) import database file at phpmyadmin page of xampp
 
 step 3) paste website folder into " xampp/htdocs " folder
 

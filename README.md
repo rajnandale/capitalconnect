@@ -14,7 +14,7 @@ step 2) paste website folder into " xampp/htdocs " folder
 
 step 3) Into browser open localhost/capitalconnect url
 
-![Alternate Setup With Xampp: Setup own local mysql database](/screenshots/setup.txt)
+![Alternate Setup With Xampp: Setup own local mysql database](/database_file/setup.txt)
 
 ## we encouraged to forked this repo and contribute by making this project well structured using framework
 suggestion :- use laravel framework, enable remote sql database support,

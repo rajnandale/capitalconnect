@@ -19,5 +19,10 @@ step 4) Into browser open localhost/capitalconnect url
 ## we encouraged to forked this repo and contribute by making this project well structured using framework
 suggestion :- use laravel framework, enable remote sql database support,
 
-
 Still if u need any help then contact owner of this repo i.e. me Raj Nandale
+
+![Showcase page](/screenshots/showcase.png)
+![Explore page](/screenshots/explore.png)
+![Usertype page](/screenshots/usertype.png)
+![Register page](/screenshots/register.png)
+![Login page](/screenshots/login.png)

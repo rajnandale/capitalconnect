@@ -2,7 +2,7 @@ Capital Connect web project is develope as begineer level project
 
 No framework is used in this project, All the files and content of this project is unstructured
 
-## Initial objective during project development was to develop a working and funtional web application with Appealing Frontend.
+# Initial objective during project development was to develop a working and funtional web application with Appealing Frontend.
 
 For initializing and setting things locally follow below steps:
 

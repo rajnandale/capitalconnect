@@ -32,6 +32,6 @@ Still if u need any help then contact owner of this repo i.e. me Raj Nandale
 
 Tech Stack : HTML, CSS, PHP, MySQL
 
-Theme/idea of this project is inspired by startupindia.gov.in initiative
+Theme/idea of this project is inspired by [startupindia](startupindia.gov.in) initiative
 
-Features: *Chatbot support, *upload startup details through pdf presentation, *better profile section, *search funtionality, *Simple and Colorful Interface, *easier navigation
+Features: *Chatbot support, *upload startup details through pdf presentation, *better profile section, *search funtionality, *Simple and Colorful Interface, *easier navigation, *categorize section and fun interaction

@@ -12,7 +12,7 @@ step 2) create rn_8164 database in phpmyadmin page and then import database file
 
 step 3) paste website folder into " xampp/htdocs " folder
 
-step 4) Run Site on Localhost (Look for help on Internet for running website on xampp localhost)
+step 4) open xampp and start apache server and mysql , then into browser open localhost:80/capitalconnect
 
 ## we encouraged to forked this repo and contribute by making this project well structured using framework
 suggestion :- use laravel framework, enable remote sql database support,

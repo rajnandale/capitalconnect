@@ -19,10 +19,16 @@
             <li><a href ="https://www.startupindia.gov.in/content/sih/en/startup-scheme.html" >startupindia.gov</a></li>
             <?php
 session_start();
-$dbhost = "localhost";
-    $dbname = "rn_8164";
-    $dbusername = "root";
-    $dbpassword = "";
+// $dbhost = "localhost";
+//     $dbname = "rn_8164";
+//     $dbusername = "root";
+//     $dbpassword = "";
+
+
+$dbhost = "sql.freedb.tech";
+    $dbname = "freedb_rn_8164";
+    $dbusername = "freedb_mail6164";
+    $dbpassword = "5UM@AgWaVb*JCn$";
 
 	$conn = mysqli_connect($dbhost, $dbusername,$dbpassword, $dbname);
 if (isset($_SESSION['login'])) {
@@ -146,10 +152,15 @@ scrollToTopButton.addEventListener('click', function() {
 
 <?php
     // Database connection
-    $dbhost = "localhost";
-    $dbname = "rn_8164";
-    $dbusername = "root";
-    $dbpassword = "";
+    // $dbhost = "localhost";
+    // $dbname = "rn_8164";
+    // $dbusername = "root";
+    // $dbpassword = "";
+
+    $dbhost = "sql.freedb.tech";
+    $dbname = "freedb_rn_8164";
+    $dbusername = "freedb_mail6164";
+    $dbpassword = "5UM@AgWaVb*JCn$";
     $db = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
     // Fetch startups from the database

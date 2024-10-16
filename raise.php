@@ -106,10 +106,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Perform validation on the submitted values if needed
     
     // Establish a database connection
-    $servername = "localhost";
-    $dbusername = "root";
-    $password = "";
-    $dbname = "rn_8164";
+    // $servername = "localhost";
+    // $dbusername = "root";
+    // $password = "";
+    // $dbname = "rn_8164";
+
+    $dbhost = "sql.freedb.tech";
+    $dbname = "freedb_rn_8164";
+    $dbusername = "freedb_mail6164";
+    $dbpassword = "5UM@AgWaVb*JCn$";
     
     $conn = new mysqli($servername, $dbusername, $password, $dbname);
     

@@ -2,10 +2,15 @@
 session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
 
-$server = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'rn_8164';
+// $server = 'localhost';
+// $user = 'root';
+// $pass = '';
+// $db = 'rn_8164';
+
+$dbhost = "sql.freedb.tech";
+    $dbname = "freedb_rn_8164";
+    $dbusername = "freedb_mail6164";
+    $dbpassword = "5UM@AgWaVb*JCn$";
 $con=mysqli_connect($server,$user,$pass,$db) or die(mysqli_connect_error());
 if(isset($_POST["submit"])){  
   if(!empty($_POST['username1']) && !empty($_POST['password1'])) {  

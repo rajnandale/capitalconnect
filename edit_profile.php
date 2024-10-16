@@ -4,10 +4,15 @@
 <?php
 session_start();
 // Connect to the database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "rn_8164";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $dbname = "rn_8164";
+
+$dbhost = "sql.freedb.tech";
+    $dbname = "freedb_rn_8164";
+    $dbusername = "freedb_mail6164";
+    $dbpassword = "5UM@AgWaVb*JCn$";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

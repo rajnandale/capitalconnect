@@ -1,11 +1,8 @@
-
+## use another branch "local_mysql" for below operations
 step 1) install xampp and start apache server and mysql
 
 step 2) create rn_8164 database in localhost/phpmyadmin page and then import database file into rn_8164 database
 
 step 3) paste website folder into " xampp/htdocs " folder
-
-step 6) update this details in each page code 
-        
 
 step 4) Into browser open localhost/capitalconnect url

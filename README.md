@@ -28,9 +28,8 @@ Still if u need any help then contact owner of this repo i.e. me Raj Nandale
 ![Login page](/screenshots/login.png)
 
 
-Project Details:
+##Project Details:
 Tech Stack : HTML, CSS, PHP, MySQL
-Testing and Tools : Xampp
 
 Theme/idea of this project is inspired by startupindia.gov.in initiative
 

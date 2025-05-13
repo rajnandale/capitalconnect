@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>इमेज टू वीडियो (बेसिक)</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #uploadContainer {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #imagePreview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .preview-image {
+            max-width: 150px;
+            height: auto;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        #videoContainer {
+            border: 1px solid #eee;
+            padding: 10px;
+            text-align: center;
+        }
+        #videoDisplay {
+            max-width: 500px;
+            height: auto;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>बेसिक इमेज टू स्लाइड शो</h1>
+
+    <div id="uploadContainer">
+        <input type="file" id="imageUpload" multiple accept="image/*">
+        <p>एक या अधिक इमेज चुनें</p>
+    </div>
+
+    <div id="imagePreview">
+        </div>
+
+    <div id="videoContainer">
+        <h2>स्लाइड शो पूर्वावलोकन</h2>
+        <video id="videoDisplay" controls width="400"></video>
+        <button id="playButton" disabled>चलाएं</button>
+    </div>
+
+    <script>
+        const imageUpload = document.getElementById('imageUpload');
+        const imagePreview = document.getElementById('imagePreview');
+        const videoDisplay = document.getElementById('videoDisplay');
+        const playButton = document.getElementById('playButton');
+        let imageURLs = [];
+        let currentImageIndex = 0;
+        let intervalId;
+        const displayDuration = 2000; // प्रत्येक इमेज दिखाने का समय (मिलीसेकंड में)
+
+        imageUpload.addEventListener('change', function() {
+            imagePreview.innerHTML = '';
+            imageURLs = [];
+            const files = this.files;
+
+            if (files && files.length > 0) {
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    const reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.classList.add('preview-image');
+                        imagePreview.appendChild(img);
+                        imageURLs.push(e.target.result);
+                    }
+                    reader.readAsDataURL(file);
+                }
+                playButton.disabled = false;
+            } else {
+                playButton.disabled = true;
+            }
+            videoDisplay.src = ''; // पिछली वीडियो स्रोत साफ़ करें
+        });
+
+        playButton.addEventListener('click', function() {
+            currentImageIndex = 0;
+            clearInterval(intervalId);
+            if (imageURLs.length > 0) {
+                videoDisplay.style.backgroundImage = `url('${imageURLs[currentImageIndex]}')`;
+                videoDisplay.style.backgroundSize = 'contain';
+                videoDisplay.style.backgroundRepeat = 'no-repeat';
+                intervalId = setInterval(() => {
+                    currentImageIndex++;
+                    if (currentImageIndex < imageURLs.length) {
+                        videoDisplay.style.backgroundImage = `url('${imageURLs[currentImageIndex]}')`;
+                    } else {
+                        clearInterval(intervalId);
+                    }
+                }, displayDuration);
+            }
+        });
+    </script>
+</body>
+</html>

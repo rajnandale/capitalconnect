@@ -1,5 +1,9 @@
 ![Home Page](/screenshots/home.png)
-[Live Project Link](http://capitalconnect.rf.gd) : InfinityFree with limited functionality (Not Stable Release)
+
+## Live Demos
+
+- **[GitHub Pages Demo](https://rajnandale.github.io/capitalconnect/)** - Static showcase version (Recommended for viewing project information)
+- [InfinityFree Demo](http://capitalconnect.rf.gd) - Limited functionality (Not Stable Release)
 
 Capital Connect web project is develope as begineer level project
 
@@ -16,6 +20,12 @@ step 2) paste website folder into " xampp/htdocs " folder
 step 3) Into browser open localhost/capitalconnect url
 
 ![Alternate Setup With Xampp: Setup own local mysql database](/database_file/setup.txt)
+
+## GitHub Pages Deployment
+
+This project is automatically deployed to GitHub Pages on every push to the master branch. The GitHub Pages version displays a static landing page that showcases the project features, screenshots, and setup instructions.
+
+**Note:** GitHub Pages only supports static HTML/CSS/JS files. For the full PHP/MySQL functionality, please set up the project locally following the instructions below.
 
 ## we encouraged to forked this repo and contribute by making this project well structured using framework
 suggestion :- use laravel framework, Restructure the code. Divide into Modules, Responsive Mobile View

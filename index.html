@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapitalConnect - Connecting Startups with Investors</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        #header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        #navbar {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        #navbar li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        #navbar li a:hover {
+            color: #ffd700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        .tagline {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, coral, orange);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, darkorange, orange);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 50px;
+            background: #f9f9f9;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            background: linear-gradient(to bottom, #9400D3, #0077b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(255, 140, 0, 0.3);
+        }
+
+        .feature-card i {
+            font-size: 48px;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Screenshots Section */
+        .screenshots {
+            padding: 80px 50px;
+            background: white;
+        }
+
+        .screenshots h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            background: linear-gradient(to bottom, #9400D3, #0077b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .screenshot-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screenshot-item p {
+            padding: 15px;
+            background: #f9f9f9;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Tech Stack Section */
+        .tech-stack {
+            padding: 80px 50px;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .tech-stack h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            background: linear-gradient(to bottom, #9400D3, #0077b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tech-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .tech-badge {
+            background: linear-gradient(45deg, coral, orange);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Setup Section */
+        .setup {
+            padding: 80px 50px;
+            background: white;
+        }
+
+        .setup h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            background: linear-gradient(to bottom, #9400D3, #0077b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .setup-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .setup-content h3 {
+            color: #667eea;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .setup-content ol, .setup-content ul {
+            margin-left: 30px;
+            line-height: 2;
+        }
+
+        .setup-content li {
+            margin-bottom: 10px;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 50px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 30px;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .footer-section p, .footer-section a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icons i {
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .social-icons i:hover {
+            color: #ffd700;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            font-size: 18px;
+            background-color: white;
+            border: 2px dashed orange;
+            outline: none;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            display: none;
+            transition: background-color 0.3s;
+        }
+
+        .scroll-to-top:hover {
+            background-color: orange;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tagline {
+                font-size: 36px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            #navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .features, .screenshots, .tech-stack, .setup {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <section id="header">
+        <a href="index.html">
+            <img src="vector.png" class="logo" alt="CapitalConnect Logo">
+        </a>
+        <nav>
+            <ul id="navbar">
+                <li><a href="https://www.startupindia.gov.in/content/sih/en/startup-scheme.html" target="_blank">StartupIndia.gov</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="feedback.html">Contact</a></li>
+                <li><a href="https://github.com/rajnandale/capitalconnect" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="tagline">CapitalConnect</h1>
+        <p class="subtitle">Connecting Innovative Startups with Strategic Investors</p>
+        <p style="font-size: 18px; margin-bottom: 30px;">
+            A platform to bridge the gap between entrepreneurs seeking capital and investors looking for promising opportunities
+        </p>
+        <a href="https://github.com/rajnandale/capitalconnect" class="cta-button" target="_blank">
+            <i class="fab fa-github"></i> View on GitHub
+        </a>
+        <a href="#setup" class="cta-button">
+            <i class="fas fa-rocket"></i> Get Started
+        </a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-comments"></i>
+                <h3>Chatbot Support</h3>
+                <p>Integrated chatbot assistance to help users navigate the platform and get instant answers</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-file-upload"></i>
+                <h3>PDF Presentations</h3>
+                <p>Upload startup details through PDF presentations for comprehensive information sharing</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-circle"></i>
+                <h3>Profile Management</h3>
+                <p>Better profile section for startups and investors to showcase their information</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-search"></i>
+                <h3>Search Functionality</h3>
+                <p>Powerful search features to find startups by name, category, or other criteria</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-palette"></i>
+                <h3>Colorful Interface</h3>
+                <p>Simple and colorful user interface for easier navigation and better user experience</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-th-large"></i>
+                <h3>Categorized Sections</h3>
+                <p>Startups organized by categories for easy browsing and discovery</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <h2>Application Screenshots</h2>
+        <div class="screenshot-grid">
+            <div class="screenshot-item">
+                <img src="screenshots/home.png" alt="Home Page">
+                <p>Home Page</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshots/explore.png" alt="Explore Page">
+                <p>Explore Startups</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshots/showcase.png" alt="Showcase">
+                <p>Startup Showcase</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshots/usertype.png" alt="User Type">
+                <p>User Type Selection</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshots/register.png" alt="Register">
+                <p>Registration Page</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="screenshots/login.png" alt="Login">
+                <p>Login Page</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack">
+        <h2>Technology Stack</h2>
+        <p style="font-size: 18px; margin-bottom: 20px;">Built with modern web technologies</p>
+        <div class="tech-badges">
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tech-badge"><i class="fab fa-php"></i> PHP</span>
+            <span class="tech-badge"><i class="fas fa-database"></i> MySQL</span>
+        </div>
+    </section>
+
+    <!-- Setup Section -->
+    <section class="setup" id="setup">
+        <h2>Local Setup Instructions</h2>
+        <div class="setup-content">
+            <div class="note">
+                <strong><i class="fas fa-info-circle"></i> Note:</strong> This is a PHP/MySQL application. GitHub Pages shows a static version. For full functionality, follow the setup instructions below.
+            </div>
+
+            <h3><i class="fas fa-download"></i> Installation Steps</h3>
+            <ol>
+                <li>Install XAMPP and start Apache and MySQL servers</li>
+                <li>Clone or download this repository</li>
+                <li>Copy the project folder to <code>xampp/htdocs</code> directory</li>
+                <li>Import the database file from <code>database_file</code> folder into phpMyAdmin</li>
+                <li>Open your browser and navigate to <code>localhost/capitalconnect</code></li>
+            </ol>
+
+            <h3><i class="fas fa-database"></i> Database Setup</h3>
+            <ul>
+                <li>Create a database named <code>rn_8164</code> in phpMyAdmin</li>
+                <li>Import the SQL file from the <code>database_file</code> directory</li>
+                <li>Update database credentials in PHP files if needed</li>
+            </ul>
+
+            <h3><i class="fas fa-code-branch"></i> Contributing</h3>
+            <p>We encourage you to fork this repository and contribute by:</p>
+            <ul>
+                <li>Restructuring the code with a modern framework (Laravel suggested)</li>
+                <li>Dividing into modular components</li>
+                <li>Adding responsive mobile views</li>
+                <li>Improving code organization and documentation</li>
+            </ul>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <a href="https://github.com/rajnandale/capitalconnect" class="cta-button" target="_blank">
+                    <i class="fab fa-github"></i> Fork on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4><i class="fas fa-map-marker-alt"></i> Contact</h4>
+                <p><strong>Address:</strong> K K Wagh Institute Of Engineering Education & Research, Nashik</p>
+                <p><strong>Phone:</strong> +91 7588998164</p>
+                <p><strong>Hours:</strong> 10:00 - 5:00, Mon - Sat</p>
+            </div>
+            <div class="footer-section">
+                <h4><i class="fas fa-info-circle"></i> Information</h4>
+                <a href="about.html">About Us</a>
+                <a href="privacy.html">Privacy Policy & Terms</a>
+                <a href="feedback.html">Feedback / Contact Us</a>
+                <a href="https://github.com/rajnandale/capitalconnect">GitHub Repository</a>
+            </div>
+            <div class="footer-section">
+                <h4><i class="fas fa-share-alt"></i> Follow Us</h4>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <p style="margin-top: 20px;">Inspired by <a href="https://startupindia.gov.in" target="_blank" style="color: #ffd700;">Startup India</a> initiative</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 CapitalConnect. Developed as a beginner level project by Raj Nandale and team.</p>
+            <p>This GitHub Pages version is a static showcase. For full functionality, please set up locally.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-to-top" id="scrollBtn">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        // Scroll to Top functionality
+        var scrollBtn = document.getElementById('scrollBtn');
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollBtn.style.display = 'block';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+
+        scrollBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
